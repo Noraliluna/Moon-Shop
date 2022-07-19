@@ -6,7 +6,7 @@
     flex-wrap: wrap;
     text-decoration: none;
     img{
-        @include logo();
+        @include logo(50px, 40px);
     }
     h1{
         @include marca();

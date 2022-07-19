@@ -13,15 +13,16 @@ body{
         }
         display: grid;
         grid-template-areas: 
-        "logo login"
-        "barra barra";
+        "logo"
+        "login"
+        "barra";
         justify-items: center;
         align-items: stretch;
         @media (min-width:map-get($vista,mobile)) {
             grid-template-areas:             
                 "logo login"
                 "barra barra";
-            column-gap: 50px;
+            column-gap: 40px;
         }
         @media (min-width:map-get($vista,tablet)) {
             grid-template-areas: 

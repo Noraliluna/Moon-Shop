@@ -67,8 +67,8 @@ body footer h3 {
   text-decoration: none;
 }
 .logo img {
-  width: 90px;
-  height: 50px;
+  width: 50px;
+  height: 40px;
   padding: 0;
   position: relative;
 }
@@ -105,7 +105,7 @@ body {
 }
 body header {
   display: grid;
-  grid-template-areas: "logo login" "barra barra";
+  grid-template-areas: "logo" "login" "barra";
   justify-items: center;
   align-items: stretch;
   grid-area: encabezado;
@@ -119,11 +119,11 @@ body header .barra {
 body header .login {
   grid-area: login;
 }
-@media (min-width: 468px) {
+@media (min-width: 382px) {
   body header {
     grid-template-areas: "logo login" "barra barra";
-    -moz-column-gap: 50px;
-         column-gap: 50px;
+    -moz-column-gap: 40px;
+         column-gap: 40px;
   }
 }
 @media (min-width: 800px) {
@@ -468,7 +468,7 @@ footer .formasDePago div img {
     letter-spacing: 5px;
   }
 }
-@media (min-width: 468px) {
+@media (min-width: 382px) {
   #cuerpoQ .informacion {
     display: flex;
     flex-direction: column;
