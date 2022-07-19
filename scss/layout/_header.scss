@@ -17,7 +17,7 @@ header{
         }
         ul{
             li{
-                margin: 0 12px;
+                padding: 0 5px;
                 @media (min-width:map-get($vista, tablet)) {
                     margin: 0 20px;
                 }

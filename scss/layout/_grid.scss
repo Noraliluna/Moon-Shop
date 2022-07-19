@@ -13,9 +13,8 @@ body{
         }
         display: grid;
         grid-template-areas: 
-        "logo"
-        "login"
-        "barra";
+        "logo login"
+        "barra barra";
         justify-items: center;
         align-items: stretch;
         @media (min-width:map-get($vista,mobile)) {

@@ -78,7 +78,7 @@ body footer h3 {
   font-size: 20px;
   color: white;
 }
-@media (min-width: 798px) {
+@media (min-width: 800px) {
   .logo {
     flex-direction: column;
     align-items: center;
@@ -105,7 +105,7 @@ body {
 }
 body header {
   display: grid;
-  grid-template-areas: "logo" "login" "barra";
+  grid-template-areas: "logo login" "barra barra";
   justify-items: center;
   align-items: stretch;
   grid-area: encabezado;
@@ -126,7 +126,7 @@ body header .login {
          column-gap: 50px;
   }
 }
-@media (min-width: 798px) {
+@media (min-width: 800px) {
   body header {
     grid-template-areas: "logo login" "logo barra";
   }
@@ -158,7 +158,7 @@ body footer .buscar {
 body footer .formasDePago {
   grid-area: pago;
 }
-@media (min-width: 798px) {
+@media (min-width: 800px) {
   body footer {
     grid-template-areas: "pago buscar" "noticias noticias";
   }
@@ -199,7 +199,7 @@ body footer .formasDePago {
 .cuerpoI .collage .foto5 {
   grid-area: foto5;
 }
-@media (min-width: 798px) {
+@media (min-width: 800px) {
   .cuerpoI .collage {
     grid-template-areas: "foto3 foto5" "foto4 foto2" "foto1 foto2";
   }
@@ -266,16 +266,16 @@ header .barra .navbar-nav {
   align-items: center;
   flex-direction: row;
 }
-@media (min-width: 798px) {
+@media (min-width: 800px) {
   header .barra {
     display: flex;
     justify-content: center;
   }
 }
 header .barra ul li {
-  margin: 0 12px;
+  padding: 0 5px;
 }
-@media (min-width: 798px) {
+@media (min-width: 800px) {
   header .barra ul li {
     margin: 0 20px;
   }
@@ -290,7 +290,7 @@ header .barra ul li a {
   font-family: "Bebas Neue", cursive;
   color: rgb(108, 51, 134) !important;
 }
-@media (min-width: 798px) {
+@media (min-width: 800px) {
   header .barra ul li a {
     border-radius: 10%;
     margin: 0 10px;
@@ -474,7 +474,7 @@ footer .formasDePago div img {
     flex-direction: column;
   }
 }
-@media (min-width: 798px) {
+@media (min-width: 800px) {
   #cuerpoQ .informacion {
     display: grid;
     grid-template-areas: "info1 info2" "info3 info4";
