@@ -1,0 +1,23 @@
+@mixin logo($width:90px, $height:50px){
+    width: $width;
+    height: $height;
+    padding: 0;
+    position: relative;
+}
+
+@mixin marca($espacio:5px, $font:20px, $color:white){
+    font-family: $tipografia-principal;
+    letter-spacing: $espacio;
+    font-size: $font;
+    color: white;
+}
+
+@mixin borde-luminoso($medida: 30px){
+    -moz-box-shadow: 0px 0px $medida $color3;
+    -webkit-box-shadow: 0px 0px $medida $color3;
+    box-shadow: 0px 0px $medida $color3;
+
+    border: 1px solid $color3;
+
+    transition: 2s;
+}

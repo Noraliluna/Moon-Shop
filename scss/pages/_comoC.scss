@@ -1,0 +1,52 @@
+#cuerpoC{
+    .tituloP{
+        @extend .titulo;
+        h2{
+            @extend .subtitulo;
+        }
+    }
+    section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 2rem;
+        @media screen and(min-width:map-get($vista,desktop)) {
+            flex-direction: row;
+        }
+        ol{
+            padding: 0;
+            border-radius: 1rem;
+            text-align: start;
+            margin: 0 20px;
+            li{
+                list-style: none;
+                margin:5px 0px;
+                h4{
+                    @extend .sub-subtitulo;
+                    font-size: 20px;
+                    @include borde-luminoso($medida:20px);
+                    padding: 2px;
+                    background-color: $color2;
+                }
+                p{
+                    border-radius: 1rem;
+                    padding: 2px 2px 0 10px;
+                    font-family: $parrafo;
+                    color: $color1;
+                    background-color: $color2;
+                }
+            }
+        }
+        .video{
+            iframe{
+                width:350px; 
+                height:215px;
+                @media (min-width:map-get($vista, desktop)) {
+                    width: 500px; 
+                    height: 315px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items:flex-end;
+    flex-wrap: wrap;
+    text-decoration: none;
+    img{
+        @include logo();
+    }
+    h1{
+        @include marca();
+    }
+    @media (min-width:map-get($vista, tablet)) {
+        flex-direction: column;
+        align-items: center;
+    }
+    @media (min-width:map-get($vista, desktop)) {
+        flex-direction: row;
+        align-items:flex-end;
+        h1{
+            @include marca(10px, 30px,)
+        }
+    }
+}

@@ -1,0 +1,180 @@
+
+body{
+    display: grid;
+    header{
+        .logo{
+            grid-area: logo;
+        }
+        .barra{
+            grid-area: barra;
+        }
+        .login{
+            grid-area: login;
+        }
+        display: grid;
+        grid-template-areas: 
+        "logo"
+        "login"
+        "barra";
+        justify-items: center;
+        align-items: stretch;
+        @media (min-width:map-get($vista,mobile)) {
+            grid-template-areas:             
+                "logo login"
+                "barra barra";
+            column-gap: 50px;
+        }
+        @media (min-width:map-get($vista,tablet)) {
+            grid-template-areas: 
+            "logo login"
+            "logo barra";
+        }
+        @media (min-width:map-get($vista,desktop)) {
+            grid-template-areas: 
+            "logo barra login";
+            column-gap: 10px;
+        }
+        grid-area: encabezado;
+    }
+    main{
+        grid-area: main;
+    }
+    footer{
+        .noticias{
+            grid-area: noticias;
+        }
+        .buscar{
+            grid-area: buscar;
+        }
+        .formasDePago{
+            grid-area: pago;
+        }
+        display: grid;
+        grid-template-areas: 
+            "noticias"
+            "pago"
+            "buscar";
+        row-gap: 2rem;
+        justify-items: center;
+        justify-content: space-evenly;
+        @media (min-width:map-get($vista, tablet)) {
+            grid-template-areas: 
+                "pago buscar" 
+                "noticias noticias";
+            }
+        @media (min-width:map-get($vista, desktop)) {
+            grid-template-areas: 
+                "noticias buscar pago";
+        }
+        grid-area: pie;
+    }
+    grid-template-areas: 
+    "encabezado"
+    "main"
+    "pie";
+    row-gap: 1.5rem;
+}
+
+
+.cuerpoI{
+    .carousel{
+        grid-area: carousel;
+    }
+    .tituloP{
+        grid-area: tituloI;
+    }
+    .collage{
+        grid-area: collage;
+        .foto1{
+            grid-area: foto1;
+        }
+        .foto2{
+            grid-area: foto2;
+        }
+        .foto3{
+            grid-area: foto3;
+        }
+        .foto4{
+            grid-area: foto4;
+        }
+        .foto5{
+            grid-area: foto5;
+        }
+        display: grid;
+        grid-template-areas:
+        "foto3"
+        "foto5"
+        "foto4"
+        "foto1"
+        "foto2";
+        
+        @media (min-width: map-get($vista,tablet)) {
+            grid-template-areas: 
+            "foto3 foto5"
+            "foto4 foto2"
+            "foto1 foto2";
+        }
+        @media (min-width: map-get($vista, desktop)){
+            grid-template-areas: 
+            "foto1 foto2 foto3"
+            "foto1 foto2 foto5"
+            "foto4 foto2 foto5";
+            grid-template-columns: 1.2fr 1.3fr 1fr;
+            row-gap: 0;
+        }
+    }
+    display: grid;
+    grid-template-areas: 
+    "carousel"
+    "tituloI"
+    "collage";
+    #cuerpoQ{
+        .tituloP{
+            grid-area: titulo;
+        }
+        aside{
+            grid-area: publicidad;
+        }
+        .informacion{
+            grid-area: informacion;
+        }
+        display: grid;
+        grid-template-areas: 
+        "titulo"
+        "publicidad"
+        "informacion";
+        @media (min-width: map-get($vista, desktop)) {
+            grid-template-areas: 
+            "titulo"
+            "publicidad"
+            "informacion";
+        }
+    }
+    
+    #cuerpoP{
+        display: grid;
+        .tituloP{
+            grid-area: titulo;
+        }
+        .femenino{
+            grid-area: subtitulo1;
+        }
+        .ropa1{
+            grid-area: ropaF;
+        }
+        .masculino{
+            grid-area: subtitulo2;
+        }
+        .ropa2{
+            grid-area: ropaM;
+        }
+        grid-template-areas: 
+            "titulo" 
+            "subtitulo1"
+            "ropaF" 
+            "subtitulo2"
+            "ropaM";
+        column-gap: 0;
+    }
+}
+

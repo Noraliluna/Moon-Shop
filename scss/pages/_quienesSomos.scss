@@ -1,0 +1,72 @@
+#cuerpoQ{
+    .tituloP{
+        @extend .titulo;
+        h2{
+            @extend .subtitulo;
+        }
+    }
+    aside{
+        background-image: url(../img/publicidad.webp);
+        border: $color1 solid 2px;
+        width: 100%;
+        height: min-content;
+        p{
+            color: $color2;
+            padding-top: 15px;
+            a{
+                color: $color2;
+                font-family: $tipografia-principal;
+            }
+            @media (min-width:map-get($vista, desktop)) {
+                font-size:20px;
+                letter-spacing: 5px;
+            }
+        }
+    }
+    .informacion{
+        @media (min-width:map-get($vista, mobile)) {
+            display: flex;
+            flex-direction: column;
+        }
+        @media (min-width:map-get($vista, tablet)) {
+            display: grid;
+            .info-1{
+                grid-area: info1;
+            }
+            .info-2{
+                grid-area: info2;
+            }
+            .info-3{
+                grid-area: info3;
+            }
+            .info-4{
+                grid-area: info4;
+            }            grid-template-areas: 
+            "info1 info2"
+            "info3 info4";
+        }
+        @media (min-width:map-get($vista, desktop)) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+        div{
+            padding: 10px;
+            margin: 0 50px;
+            margin-bottom: 1rem;
+            border-radius: 10%;
+            background-color: $color2;
+            border-bottom: $color1 3px solid;
+            border-left: $color1 2px solid;
+            img{
+                border-radius: 50% ;
+                @include borde-luminoso();
+                background-color: $color2;
+            }
+            p{
+                margin-top: 10px;
+                font-family: $parrafo;
+            }
+        }
+    }
+}

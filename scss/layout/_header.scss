@@ -1,0 +1,95 @@
+header{
+    background-color: $color1;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding:5px 0;
+    .barra{
+        display: flex;
+        background-color: $color1;
+        padding: 0;
+        .navbar-nav{
+            align-items: center;
+            flex-direction: row;
+        }
+        @media (min-width:map-get($vista,tablet)) {
+                    display: flex;
+                justify-content: center;
+        }
+        ul{
+            li{
+                margin: 0 12px;
+                @media (min-width:map-get($vista, tablet)) {
+                    margin: 0 20px;
+                }
+                @media (min-width:map-get($vista, desktop)) {
+                    margin: 0 5px;
+                }
+                a{
+                    text-decoration: none;
+                    font-family: $tipografia-principal;
+                    color: $color3!important;
+                    @media (min-width:map-get($vista,tablet)) {
+                        border-radius: 10%;
+                        margin: 0 10px;
+                        padding: 0 2px;
+                        &:hover{
+                            @include borde-luminoso();
+                            background-color: $color2;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .login{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: stretch;
+        flex-wrap: wrap;
+        background-color: $color1;
+        ul{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+            li{
+                display: inline-block;
+                button{
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    img{
+                        width: 40px;
+                        height: 40px;
+                        -moz-border-radius: 50%;
+                        -webkit-border-radius: 50%;
+                        border-radius: 50%;
+                        border: solid 2px $color1;
+                        background-color: $color2;
+                        margin:0;
+                    }
+                }
+            }
+        }
+    }
+    .redes{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin-top: 50vh;
+        margin-left: 3px;
+        width: 50px;
+        z-index: 1;
+        ul{
+            padding-left: 0;
+            li{
+                display: inline-block;
+            }
+        }
+    }
+}

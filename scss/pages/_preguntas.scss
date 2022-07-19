@@ -1,0 +1,35 @@
+#cuerpoPF{
+    .tituloP{
+        @extend .titulo;
+        h2{
+            @extend .subtitulo;
+        }
+    }
+    div{
+        h2{
+            font-family: $subtitulos;
+            button{
+                color: $color1;
+            }
+        }
+        div{
+            p{
+                font-family: $parrafo;
+                text-align: start;
+            }
+            ul{
+                font-family: $parrafo;
+                li{
+                    list-style: none;
+                    text-align: start;
+                }
+                div{
+                    img{
+                        max-width: 1.5cm;
+                        max-height: 1.5cm;
+                    }
+                }
+            }
+        }
+    }
+}

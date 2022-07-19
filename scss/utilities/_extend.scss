@@ -1,0 +1,19 @@
+.subtitulo {
+    font-family: $tipografia-principal;
+    text-transform: uppercase;
+    color: $color2;
+    margin: 0;
+    padding: 10px 0;
+}
+.sub-subtitulo{
+    font-family:$subtitulos;
+    text-transform: uppercase;
+    background-color: $color2;
+    padding: 10px;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+.titulo{
+    background-color: $color1;
+    margin: 10px 0;
+}
