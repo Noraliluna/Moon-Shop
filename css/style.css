@@ -122,8 +122,8 @@ body header .login {
 @media (min-width: 382px) {
   body header {
     grid-template-areas: "logo login" "barra barra";
-    -moz-column-gap: 40px;
-         column-gap: 40px;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
   }
 }
 @media (min-width: 800px) {

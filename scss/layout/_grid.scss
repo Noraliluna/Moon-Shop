@@ -22,7 +22,7 @@ body{
             grid-template-areas:             
                 "logo login"
                 "barra barra";
-            column-gap: 40px;
+            column-gap: 10px;
         }
         @media (min-width:map-get($vista,tablet)) {
             grid-template-areas: 
