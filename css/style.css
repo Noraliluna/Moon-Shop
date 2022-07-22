@@ -131,6 +131,8 @@ body header .login .show .offcanvas-body input {
   justify-items: center;
   align-items: baseline;
   grid-template-areas: "nombre nombre" "precio boton";
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
 }
 #cuerpoP figcaption a {
   grid-area: nombre;
