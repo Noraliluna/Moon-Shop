@@ -29,7 +29,7 @@ header{
                     font-family: $tipografia-principal;
                     color: $color3!important;
                     @media (min-width:map-get($vista,tablet)) {
-                        border-radius: 10%;
+                        border-radius: 1rem;
                         margin: 0 10px;
                         padding: 0 2px;
                         &:hover{

@@ -1,0 +1,36 @@
+body{
+    header{
+        .login{
+            .show{
+                height: max-content;
+                border-radius: 1rem;
+                background-color: $color2;
+                border-bottom: $color3 3px solid;
+                border-top-right-radius: 0rem;
+
+                border-left: $color3 2px solid;
+                button{
+                    border-radius: 1rem;
+                    border-bottom: $color3 3px solid;
+                    border-left: $color3 2px solid;
+                }
+                .offcanvas-header{
+                    h5{
+                        text-transform: uppercase;
+                        color: $color1;
+                    }
+                }
+                .offcanvas-body{
+                    label{
+                        text-transform: uppercase;
+                        color: $color1;
+                    }
+                    input{
+                        border-bottom: 2px solid $color3;
+                        border-left: 3px solid $color3;
+                    }
+                }
+            }
+        }
+    }
+}

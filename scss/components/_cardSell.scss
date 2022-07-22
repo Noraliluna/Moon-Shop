@@ -1,0 +1,20 @@
+#cuerpoP{
+    figcaption{
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+        align-items: baseline;
+        a{
+            grid-area: nombre;
+        }
+        p{
+            grid-area: precio;
+        }
+        button{
+            grid-area: boton;
+        }
+        grid-template-areas: 
+            "nombre nombre"
+            "precio boton";
+    }
+}

@@ -41,6 +41,18 @@
                 p{
                     color: $color2;
                 }
+                button{
+                    -moz-border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    border-radius: 50%;
+                    border: solid 2px $color1;
+                    background-color: $color2;
+                    width: min-content;
+                    img{
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
             }
             transition: all 2s ease-out;
             &:hover{
