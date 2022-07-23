@@ -25,9 +25,13 @@
             padding: 0px;
             margin: 10px 5px;
             img{
-                max-width: 7cm;
-                max-height: 7cm;
+                max-width: 6cm;
+                max-height: 6cm;
                 margin: 1px;
+                @media (min-width:map-get($vista, tablet)) {
+                    max-width: 7cm;
+                    max-height: 7cm;          
+                }                
             }
             figcaption{
                 a{

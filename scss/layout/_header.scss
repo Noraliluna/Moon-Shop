@@ -1,8 +1,4 @@
 header{
-    background-color: $color1;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding:5px 0;
     .barra{
         display: flex;
         background-color: $color1;
@@ -24,18 +20,24 @@ header{
                 @media (min-width:map-get($vista, desktop)) {
                     margin: 0 5px;
                 }
-                a{
+                .boton-hover{
                     text-decoration: none;
                     font-family: $tipografia-principal;
                     color: $color3!important;
-                    @media (min-width:map-get($vista,tablet)) {
+                    @media (min-width:map-get($vista,mobile)) {
                         border-radius: 1rem;
                         margin: 0 10px;
                         padding: 0 2px;
                         &:hover{
-                            @include borde-luminoso();
+                            @include borde-luminoso(1rem);
                             background-color: $color2;
                         }
+                    }
+                }
+                .dropdown-menu{
+                    a{
+                        font-family: $tipografia-principal;
+                        color: $color3!important;
                     }
                 }
             }
@@ -60,8 +62,8 @@ header{
                     padding-top: 0;
                     padding-bottom: 0;
                     img{
-                        width: 40px;
-                        height: 40px;
+                        width: 30px;
+                        height: 30px;
                         -moz-border-radius: 50%;
                         -webkit-border-radius: 50%;
                         border-radius: 50%;

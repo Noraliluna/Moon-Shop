@@ -1,7 +1,6 @@
-
 body{
-    display: grid;
     header{
+        display: grid;
         .logo{
             grid-area: logo;
         }
@@ -11,7 +10,6 @@ body{
         .login{
             grid-area: login;
         }
-        display: grid;
         grid-template-areas: 
         "logo"
         "login"
@@ -23,6 +21,7 @@ body{
                 "logo login"
                 "barra barra";
             column-gap: 10px;
+            row-gap: 1rem;
         }
         @media (min-width:map-get($vista,tablet)) {
             grid-template-areas: 
@@ -34,10 +33,6 @@ body{
             "logo barra login";
             column-gap: 10px;
         }
-        grid-area: encabezado;
-    }
-    main{
-        grid-area: main;
     }
     footer{
         .noticias{
@@ -66,15 +61,8 @@ body{
             grid-template-areas: 
                 "noticias buscar pago";
         }
-        grid-area: pie;
     }
-    grid-template-areas: 
-    "encabezado"
-    "main"
-    "pie";
-    row-gap: 1.5rem;
 }
-
 
 .cuerpoI{
     .carousel{
@@ -128,7 +116,9 @@ body{
     "carousel"
     "tituloI"
     "collage";
-    #cuerpoQ{
+}
+
+#cuerpoQ{
         .tituloP{
             grid-area: titulo;
         }
@@ -149,9 +139,9 @@ body{
             "publicidad"
             "informacion";
         }
-    }
+}
     
-    #cuerpoP{
+#cuerpoP{
         display: grid;
         .tituloP{
             grid-area: titulo;
@@ -175,6 +165,4 @@ body{
             "subtitulo2"
             "ropaM";
         column-gap: 0;
-    }
 }
-

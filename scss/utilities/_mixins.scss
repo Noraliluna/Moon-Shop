@@ -5,11 +5,11 @@
     position: relative;
 }
 
-@mixin marca($espacio:5px, $font:20px, $color:white){
+@mixin marca($espacio:5px, $font:20px, $color:$color2){
     font-family: $tipografia-principal;
     letter-spacing: $espacio;
     font-size: $font;
-    color: white;
+    color: $color2;
 }
 
 @mixin borde-luminoso($medida: 30px){

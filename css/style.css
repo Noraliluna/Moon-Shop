@@ -36,14 +36,19 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
   background-image: url(../img/fondo5.png);
   background-position-x: center;
   background-color: white;
   text-align: center;
-  width: auto;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
+}
+body header {
+  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5px 0;
 }
 body main {
   display: grid;
@@ -145,17 +150,11 @@ body header .login .show .offcanvas-body input {
 }
 
 /*layout*/
-body {
-  display: grid;
-  grid-template-areas: "encabezado" "main" "pie";
-  row-gap: 1.5rem;
-}
 body header {
   display: grid;
   grid-template-areas: "logo" "login" "barra";
   justify-items: center;
   align-items: stretch;
-  grid-area: encabezado;
 }
 body header .logo {
   grid-area: logo;
@@ -171,6 +170,7 @@ body header .login {
     grid-template-areas: "logo login" "barra barra";
     -moz-column-gap: 10px;
          column-gap: 10px;
+    row-gap: 1rem;
   }
 }
 @media (min-width: 800px) {
@@ -185,16 +185,12 @@ body header .login {
          column-gap: 10px;
   }
 }
-body main {
-  grid-area: main;
-}
 body footer {
   display: grid;
   grid-template-areas: "noticias" "pago" "buscar";
   row-gap: 2rem;
   justify-items: center;
   justify-content: space-evenly;
-  grid-area: pie;
 }
 body footer .noticias {
   grid-area: noticias;
@@ -258,52 +254,48 @@ body footer .formasDePago {
     row-gap: 0;
   }
 }
-.cuerpoI #cuerpoQ {
+
+#cuerpoQ {
   display: grid;
   grid-template-areas: "titulo" "publicidad" "informacion";
 }
-.cuerpoI #cuerpoQ .tituloP {
+#cuerpoQ .tituloP {
   grid-area: titulo;
 }
-.cuerpoI #cuerpoQ aside {
+#cuerpoQ aside {
   grid-area: publicidad;
 }
-.cuerpoI #cuerpoQ .informacion {
+#cuerpoQ .informacion {
   grid-area: informacion;
 }
 @media (min-width: 1024px) {
-  .cuerpoI #cuerpoQ {
+  #cuerpoQ {
     grid-template-areas: "titulo" "publicidad" "informacion";
   }
 }
-.cuerpoI #cuerpoP {
+
+#cuerpoP {
   display: grid;
   grid-template-areas: "titulo" "subtitulo1" "ropaF" "subtitulo2" "ropaM";
   -moz-column-gap: 0;
        column-gap: 0;
 }
-.cuerpoI #cuerpoP .tituloP {
+#cuerpoP .tituloP {
   grid-area: titulo;
 }
-.cuerpoI #cuerpoP .femenino {
+#cuerpoP .femenino {
   grid-area: subtitulo1;
 }
-.cuerpoI #cuerpoP .ropa1 {
+#cuerpoP .ropa1 {
   grid-area: ropaF;
 }
-.cuerpoI #cuerpoP .masculino {
+#cuerpoP .masculino {
   grid-area: subtitulo2;
 }
-.cuerpoI #cuerpoP .ropa2 {
+#cuerpoP .ropa2 {
   grid-area: ropaM;
 }
 
-header {
-  background-color: black;
-  background-position: center;
-  background-repeat: no-repeat;
-  padding: 5px 0;
-}
 header .barra {
   display: flex;
   background-color: black;
@@ -332,23 +324,27 @@ header .barra ul li {
     margin: 0 5px;
   }
 }
-header .barra ul li a {
+header .barra ul li .boton-hover {
   text-decoration: none;
   font-family: "Bebas Neue", cursive;
   color: rgb(108, 51, 134) !important;
 }
-@media (min-width: 800px) {
-  header .barra ul li a {
+@media (min-width: 382px) {
+  header .barra ul li .boton-hover {
     border-radius: 1rem;
     margin: 0 10px;
     padding: 0 2px;
   }
-  header .barra ul li a:hover {
-    box-shadow: 0px 0px 30px rgb(108, 51, 134);
+  header .barra ul li .boton-hover:hover {
+    box-shadow: 0px 0px 1rem rgb(108, 51, 134);
     border: 1px solid rgb(108, 51, 134);
     transition: 2s;
     background-color: white;
   }
+}
+header .barra ul li .dropdown-menu a {
+  font-family: "Bebas Neue", cursive;
+  color: rgb(108, 51, 134) !important;
 }
 header .login {
   display: flex;
@@ -373,8 +369,8 @@ header .login ul li button {
   padding-bottom: 0;
 }
 header .login ul li button img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   border: solid 2px black;
   background-color: white;
@@ -661,9 +657,15 @@ footer .formasDePago div img {
   transition: all 2s ease-out;
 }
 #cuerpoP section div img {
-  max-width: 7cm;
-  max-height: 7cm;
+  max-width: 6cm;
+  max-height: 6cm;
   margin: 1px;
+}
+@media (min-width: 800px) {
+  #cuerpoP section div img {
+    max-width: 7cm;
+    max-height: 7cm;
+  }
 }
 #cuerpoP section div figcaption a {
   display: flex;
